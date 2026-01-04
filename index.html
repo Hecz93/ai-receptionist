@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus AI | The 24/7 Revenue Machine</title>
-    <meta name="description" content="Stop losing revenue to voicemail. Nexus AI agents answer calls instantly, qualify leads, and book appointments 24/7.">
+    <meta name="description"
+        content="Stop losing revenue to voicemail. Nexus AI agents answer calls instantly, qualify leads, and book appointments 24/7.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         :root {
             --brand-blue: #2563eb;
             --brand-indigo: #4f46e5;
             --brand-accent: #8b5cf6;
         }
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4, .font-outfit { font-family: 'Outfit', sans-serif; }
-        
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-outfit {
+            font-family: 'Outfit', sans-serif;
+        }
+
         .glass {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        
+
         .glass-dark {
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -51,27 +64,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
 
-        .marquee-container {
-            overflow: hidden;
-            white-space: nowrap;
-        }
+            0%,
+            100% {
+                transform: translateY(0);
+            }
 
-        .marquee-content {
-            display: inline-block;
-            animation: marquee 30s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .check-icon {
-            color: #10b981;
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .btn-premium {
@@ -83,273 +84,228 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
         }
+
+        .swiper {
+            width: 100%;
+            padding-bottom: 50px !important;
+        }
+
+        .swiper-slide {
+            height: auto;
+        }
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden">
 
-    <!-- Header -->
     <header class="fixed top-0 w-full z-50 transition-all duration-300 px-4 pt-4">
         <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-4 flex justify-between items-center shadow-sm">
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                     <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                 </div>
-                <span class="text-xl font-bold tracking-tight text-slate-900 font-outfit">Nexus<span class="text-blue-600">AI</span></span>
+                <span class="text-xl font-bold tracking-tight text-slate-900 font-outfit">Nexus<span
+                        class="text-blue-600">AI</span></span>
             </div>
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
                 <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
-                <a href="#results" class="hover:text-blue-600 transition-colors">Results</a>
-                <a href="#testimonials" class="hover:text-blue-600 transition-colors">Testimonials</a>
+                <a href="#testimonials" class="hover:text-blue-600 transition-colors">Results</a>
+                <a href="#demo" class="hover:text-blue-600 transition-colors">Pricing</a>
             </nav>
             <div>
-                <a href="#demo" class="btn-premium text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-blue-500/20 active:scale-95 transition-transform">
-                    Book a Call
-                </a>
+                <a href="#demo"
+                    class="btn-premium text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-blue-500/20 active:scale-95 transition-transform">Book
+                    a Demo</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div class="hero-glow top-20 -left-20"></div>
-        <div class="hero-glow bottom-0 -right-20"></div>
-        
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div class="relative z-10">
-                <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold mb-6 border border-blue-100 uppercase tracking-widest">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
-                    </span>
-                    Live Now: Your 24/7 Sales Engine
+                <div
+                    class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold mb-6 border border-blue-100 uppercase tracking-widest">
+                    <span class="relative flex h-2 w-2"><span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span
+                            class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span></span>
+                    Inc 500 Trusted Solution
                 </div>
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-8 text-slate-900">
-                    Stop Losing Revenue to <span class="gradient-text">Voicemail.</span>
-                </h1>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-8 text-slate-900">Stop Losing Revenue to
+                    <span class="gradient-text">Voicemail.</span></h1>
                 <p class="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-xl">
-                    We deploy highly-trained AI agents that answer calls instantly, qualify leads naturally, and book high-ticket appointments directly into your calendar.
+                    We deploy AI agents that answer calls instantly, qualify leads, and book high-ticket appointments
+                    while you sleep.
+                    <br><br>
+                    <strong>The Mafia Offer:</strong> If our AI doesn't double its cost in captured revenue within 30
+                    days, <strong>you don't pay.</strong>
                 </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                    <a href="#demo" class="btn-premium text-white px-8 py-4 rounded-2xl font-bold text-lg text-center shadow-xl shadow-blue-500/30">
-                        Get Your Custom Demo &rarr;
-                    </a>
-                </div>
-
-                <div class="flex items-center gap-6">
-                    <div class="flex -space-x-3">
-                        <img src="assets/avatars/avatar_1.png" alt="User" class="w-10 h-10 rounded-full border-2 border-white">
-                        <img src="assets/avatars/avatar_2.png" alt="User" class="w-10 h-10 rounded-full border-2 border-white">
-                        <div class="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-600">1k+</div>
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-slate-900">"Recovered $12,450 in 30 days"</p>
-                        <div class="flex gap-1">
-                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        </div>
-                    </div>
+                <div class="flex flex-col sm:row gap-4 mb-12">
+                    <a href="#demo"
+                        class="btn-premium text-white px-8 py-4 rounded-2xl font-bold text-lg text-center shadow-xl shadow-blue-500/30">Capture
+                        More Leads &rarr;</a>
                 </div>
             </div>
-            
             <div class="relative animate-float">
                 <div class="relative z-10 p-2 glass rounded-[2rem] shadow-2xl overflow-hidden border-4 border-white">
-                    <img src="assets/hero_dashboard.png" alt="AI Receptionist Dashboard" class="w-full rounded-[1.5rem] shadow-inner">
+                    <img src="assets/hero_dashboard.png" alt="AI Dashboard" class="w-full rounded-[1.5rem]">
                 </div>
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl"></div>
-                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl"></div>
             </div>
         </div>
     </section>
 
-    <!-- Logo Marquee -->
+    <!-- Social Proof Section -->
     <section class="py-12 border-y border-slate-200 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-10">Trusted by high-growth agencies & Inc 500 companies</p>
-            <div class="flex justify-center items-center">
-                <img src="assets/logo_set.png" alt="Trusted Logistics Partners" class="max-h-24 md:max-h-32 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+            <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">Trusted by Inc 500
+                Industry Leaders</p>
+            <div
+                class="flex justify-center flex-wrap gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <img src="assets/logo_set.png" alt="Trusted Partners" class="max-h-20">
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-24 bg-white relative">
+    <!-- SPINNING TESTIMONIALS -->
+    <section id="testimonials" class="py-24 bg-slate-900 text-white relative">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-outfit">The "Mafia Offer" Guarantee</h2>
-                <p class="text-xl text-slate-600 max-w-2xl mx-auto">
-                    If our AI doesn't recover its cost in missed leads within the first 30 days, <span class="text-blue-600 font-bold">you don't pay a dime.</span>
-                </p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-outfit">Real Results, Zero Risk.</h2>
+                <p class="text-slate-400">Join the elite businesses scaling with Nexus AI.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="p-10 glass rounded-3xl border border-slate-100 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300">
-                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-8">
-                        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                        </svg>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide h-full">
+                        <div
+                            class="glass-dark p-10 h-full rounded-[2.5rem] border border-slate-800 flex flex-col justify-between">
+                            <p class="text-xl text-slate-200 leading-relaxed mb-8 italic">
+                                "Captured an HVAC lead worth $14k on day 2 that happened at 11 PM. Our human team would
+                                have missed it. This pays for itself instantly."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <img src="assets/avatars/avatar_1.png" alt="Client"
+                                    class="w-14 h-14 rounded-2xl ring-2 ring-blue-500">
+                                <div>
+                                    <p class="font-bold">Mark D.</p>
+                                    <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Premier HVAC
+                                        (Inc 5000)</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Instant Pick Up</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        Never let another lead go to voicemail. Our AI answers on the first ring with a voice indistinguishable from a human.
-                    </p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="p-10 glass rounded-3xl border border-slate-100 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 bg-slate-50/50">
-                    <div class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center mb-8">
-                        <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide h-full">
+                        <div
+                            class="glass-dark p-10 h-full rounded-[2.5rem] border border-slate-800 flex flex-col justify-between">
+                            <p class="text-xl text-slate-200 leading-relaxed mb-8 italic">
+                                "The calendar integration is seamless. It booked 42 appointments for our clinic last
+                                month without a single error. Incredible."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <img src="assets/avatars/avatar_2.png" alt="Client"
+                                    class="w-14 h-14 rounded-2xl ring-2 ring-blue-500">
+                                <div>
+                                    <p class="font-bold">Dr. Sarah Jenkins</p>
+                                    <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">BrightSmile
+                                        Dental</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Calendar Sync</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        Seamlessly integrates with Google, Outlook, and CLMs to book appointments directly into your sales team's calendar.
-                    </p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="p-10 glass rounded-3xl border border-slate-100 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300">
-                    <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-8">
-                        <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Lead Qualification</h3>
-                    <p class="text-slate-600 leading-relaxed">
-                        The AI asks your specific screening questions to ensure only high-intent, qualified leads reach your desk.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results/Testimonials -->
-    <section id="testimonials" class="py-24 bg-slate-900 text-white overflow-hidden relative">
-        <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                <div class="max-w-xl">
-                    <h2 class="text-4xl md:text-6xl font-extrabold mb-6 font-outfit">Don't take <br>our <span class="text-blue-400">Word</span> for it.</h2>
-                    <p class="text-xl text-slate-400">See real results from businesses that automated their growth.</p>
-                </div>
-                <div class="flex gap-4">
-                    <div class="p-4 rounded-2xl glass-dark border border-slate-800">
-                        <p class="text-3xl font-bold text-blue-400">40+</p>
-                        <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Appointments / Mo</p>
-                    </div>
-                    <div class="p-4 rounded-2xl glass-dark border border-slate-800">
-                        <p class="text-3xl font-bold text-blue-400">100%</p>
-                        <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Pick-up Rate</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-10">
-                <!-- Testimonial 1 -->
-                <div class="glass-dark p-12 rounded-[2.5rem] border border-slate-800 hover:border-blue-500/30 transition-colors">
-                    <div class="text-blue-400 mb-8">
-                        <svg class="w-12 h-12 fill-current opacity-20" viewBox="0 0 32 32"><path d="M10 8v8h6v12h-8v-12h-4v-8h6zm16 0v8h6v12h-8v-12h-4v-8h6z"/></svg>
-                    </div>
-                    <p class="text-2xl text-slate-200 leading-relaxed mb-10 italic">
-                        "We were missing about 15 calls a day during peak hours. The AI receptionist paid for itself on day 3 by capturing a high-ticket HVAC install that would have gone to a competitor."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <img src="assets/avatars/avatar_1.png" alt="Mark D." class="w-16 h-16 rounded-2xl object-cover ring-2 ring-blue-500 ring-offset-4 ring-offset-slate-900 shadow-xl">
-                        <div>
-                            <p class="text-lg font-bold">Mark D.</p>
-                            <p class="text-slate-500">CEO, Premier Plumbing & HVAC (Inc 5000)</p>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide h-full">
+                        <div
+                            class="glass-dark p-10 h-full rounded-[2.5rem] border border-slate-800 flex flex-col justify-between">
+                            <p class="text-xl text-slate-200 leading-relaxed mb-8 italic">
+                                "We scaled our Law Firm lead intake by 40% in one month. The AI qualifies every caller
+                                so my staff only talks to high-intent clients."
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-xl font-bold">
+                                    AR</div>
+                                <div>
+                                    <p class="font-bold">Alex Rivera</p>
+                                    <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Director,
+                                        Elite Legal</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Testimonial 2 -->
-                <div class="glass-dark p-12 rounded-[2.5rem] border border-slate-800 hover:border-blue-500/30 transition-colors">
-                    <div class="text-blue-400 mb-8">
-                        <svg class="w-12 h-12 fill-current opacity-20" viewBox="0 0 32 32"><path d="M10 8v8h6v12h-8v-12h-4v-8h6zm16 0v8h6v12h-8v-12h-4v-8h6z"/></svg>
-                    </div>
-                    <p class="text-2xl text-slate-200 leading-relaxed mb-10 italic">
-                        "As a dental clinic, missed calls are missed patients. The calendar integration is flawless. It booked 40+ appointments last month while our front desk was busy."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <img src="assets/avatars/avatar_2.png" alt="Dr. Sarah Jenkins" class="w-16 h-16 rounded-2xl object-cover ring-2 ring-blue-500 ring-offset-4 ring-offset-slate-900 shadow-xl">
-                        <div>
-                            <p class="text-lg font-bold">Dr. Sarah Jenkins</p>
-                            <p class="text-slate-500">Founder, BrightSmile Dental</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
+    <!-- LEAD GEN FORM -->
     <section id="demo" class="py-32 bg-slate-50 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-5xl md:text-7xl font-extrabold mb-8 font-outfit">Ready to automate your <span class="gradient-text">Growth?</span></h2>
-            <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-                Stop relying on voicemail. Start capturing every opportunity. Remember our guarantee: If it doesn't generate positive ROI in 30 days, you don't pay.
-            </p>
-            
-            <div class="glass p-8 md:p-12 rounded-[3rem] shadow-2xl border-white max-w-xl mx-auto">
-                <form class="space-y-4">
-                    <input type="email" placeholder="Enter work email..." class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 outline-none transition-all text-lg">
-                    <button type="submit" class="w-full btn-premium text-white py-5 rounded-2xl font-bold text-xl shadow-xl shadow-blue-500/30 hover:scale-[1.02] active:scale-95 transition-all">
-                        WATCH INSTANT DEMO &rarr;
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-8 font-outfit">Drive More <span
+                    class="gradient-text">Sales.</span></h2>
+            <p class="text-xl text-slate-600 mb-12">Wire up your business for 24/7 success. If we don't deliver, you
+                don't pay.</p>
+
+            <div class="glass p-8 md:p-12 rounded-[3rem] shadow-2xl border-white max-w-xl mx-auto text-left">
+                <form action="https://formspree.io/f/mnnennkq" method="POST" class="space-y-4">
+                    <input type="hidden" name="_to" value="stuccosuperstars@gamail.com">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Company Name</label>
+                        <input type="text" name="company" placeholder="e.g. Acme Corp" required
+                            class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">Work Email</label>
+                        <input type="email" name="email" placeholder="email@example.com" required
+                            class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all">
+                    </div>
+                    <button type="submit"
+                        class="w-full btn-premium text-white py-5 rounded-2xl font-bold text-xl shadow-xl shadow-blue-500/30 hover:scale-[1.02] active:scale-95 transition-all">
+                        SEND ME THE DEMO &rarr;
                     </button>
                 </form>
-                <p class="mt-6 text-sm text-slate-400 flex items-center justify-center gap-2">
-                    <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    Only 3 spots left for onboarding this month.
-                </p>
+                <p class="mt-6 text-xs text-slate-400 text-center">Your leads are safe with us. We never spam.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-white py-20 border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
-            <div class="flex items-center gap-2 mb-10">
-                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                </div>
-                <span class="text-2xl font-bold tracking-tight text-slate-900 font-outfit">Nexus<span class="text-blue-600">AI</span></span>
-            </div>
-            
-            <nav class="flex gap-8 mb-12 text-sm font-semibold text-slate-500">
-                <a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-blue-600 transition-colors">Terms of Service</a>
-                <a href="#" class="hover:text-blue-600 transition-colors">Cookie Policy</a>
-            </nav>
-
-            <p class="text-slate-400 text-sm">
-                &copy; 2024 Nexus AI Solutions. All rights reserved.
-            </p>
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-2xl font-bold tracking-tight text-slate-900 font-outfit mb-4 block">Nexus<span
+                    class="text-blue-600">AI</span></span>
+            <p class="text-slate-400 text-sm">&copy; 2024 Nexus AI Solutions. Lead Gen Powered by Formspree.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Simple scroll observer for header glass effect
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            breakpoints: { 768: { slidesPerView: 2 } }
+        });
+
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
                 header.classList.add('px-0', 'pt-0');
-                header.querySelector('div').classList.remove('rounded-2xl', 'mt-4');
-                header.querySelector('div').classList.add('rounded-none', 'border-x-0', 'border-t-0');
+                header.querySelector('div').classList.remove('rounded-2xl', 'mt-4 shadow-sm');
+                header.querySelector('div').classList.add('rounded-none', 'border-x-0', 'border-t-0', 'shadow-md');
             } else {
                 header.classList.remove('px-0', 'pt-0');
-                header.querySelector('div').classList.add('rounded-2xl');
-                header.querySelector('div').classList.remove('rounded-none', 'border-x-0', 'border-t-0');
+                header.querySelector('div').classList.add('rounded-2xl', 'shadow-sm');
+                header.querySelector('div').classList.remove('rounded-none', 'border-x-0', 'border-t-0', 'shadow-md');
             }
         });
     </script>
 </body>
+
 </html>
