@@ -141,6 +141,47 @@
         .swiper-slide {
             height: auto;
         }
+
+        /* Infinite Marquee Animation */
+        .marquee {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 4rem;
+        }
+
+        .marquee-content {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-around;
+            gap: 4rem;
+            min-width: 100%;
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(calc(-100% - 4rem));
+            }
+        }
+
+        .logo-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+
+        .logo-item:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -227,14 +268,50 @@
         </div>
     </section>
 
-    <!-- Authority Row -->
-    <section class="py-12 border-y border-slate-200 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">Trusted by Inc 500
-                Industry Leaders</p>
-            <div
-                class="flex justify-center flex-wrap gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                <img src="assets/logo_set.png" alt="Logos of Inc 500 companies using AI receptionists" class="max-h-20">
+    <!-- Enterprise Social Proof Marquee -->
+    <section class="py-16 border-y border-slate-200 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12">
+            <p class="text-center text-sm font-bold text-slate-400 capitalize tracking-[0.2em]">Trusted by high-growth
+                Inc 500 enterprises</p>
+        </div>
+
+        <div class="marquee relative">
+            <div class="marquee-content">
+                <div class="logo-item"><span
+                        class="text-2xl font-black text-slate-800 tracking-tighter">ServiceTitan</span></div>
+                <div class="logo-item"><span
+                        class="text-2xl font-black text-slate-800 tracking-tighter">Attentive</span></div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Gong</span>
+                </div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Drift</span>
+                </div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Chili
+                        Piper</span></div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Intercom</span>
+                </div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Clari</span>
+                </div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Outreach</span>
+                </div>
+            </div>
+            <!-- Duplicate for infinite effect -->
+            <div class="marquee-content" aria-hidden="true">
+                <div class="logo-item"><span
+                        class="text-2xl font-black text-slate-800 tracking-tighter">ServiceTitan</span></div>
+                <div class="logo-item"><span
+                        class="text-2xl font-black text-slate-800 tracking-tighter">Attentive</span></div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Gong</span>
+                </div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Drift</span>
+                </div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Chili
+                        Piper</span></div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Intercom</span>
+                </div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Clari</span>
+                </div>
+                <div class="logo-item"><span class="text-2xl font-black text-slate-800 tracking-tighter">Outreach</span>
+                </div>
             </div>
         </div>
     </section>
